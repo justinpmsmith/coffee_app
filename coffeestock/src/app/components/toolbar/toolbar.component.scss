@@ -1,0 +1,59 @@
+.toolbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--coffee-primary-brown);
+    padding: 15px 20px;
+    height: 60px;
+    width: 100%;
+  }
+  
+  .toolbar-left,
+  .toolbar-right {
+    flex: 0 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .toolbar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .toolbar-title {
+    color: var(--coffee-white);
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .toolbar-icon-button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &:hover {
+      opacity: 0.8;
+    }
+    
+    &:active {
+      opacity: 0.6;
+    }
+  }
+  
+  .toolbar-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+  }

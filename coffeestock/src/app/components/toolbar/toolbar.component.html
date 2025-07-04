@@ -1,0 +1,23 @@
+<div class="toolbar-container">
+    <div class="toolbar-left">
+      <button 
+        *ngIf="showLeftIcon && leftIcon" 
+        class="toolbar-icon-button"
+        (click)="onLeftIconClick()">
+        <img [src]="'assets/icon/' + leftIcon" [alt]="'Left Icon'" class="toolbar-icon">
+      </button>
+    </div>
+    
+    <div class="toolbar-center">
+      <h1 class="toolbar-title">{{ title }}</h1>
+    </div>
+    
+    <div class="toolbar-right">
+      <button 
+        *ngIf="showRightIcon && rightIcon" 
+        class="toolbar-icon-button"
+        (click)="onRightIconClick()">
+        <img [src]="'assets/icon/' + rightIcon" [alt]="'Right Icon'" class="toolbar-icon">
+      </button>
+    </div>
+  </div>

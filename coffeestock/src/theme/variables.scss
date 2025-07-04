@@ -1,0 +1,29 @@
+/* Ionic Variables and Theming. For more info, please see:
+http://ionicframework.com/docs/theming/ */
+
+/** Ionic CSS Variables **/
+:root {
+    /* Coffee theme colors from spec */
+    --coffee-white: #FFFFFF;
+    --coffee-light-gray: #F5F8FA;
+    --coffee-medium-gray: #CCD6DD;
+    --coffee-dark-gray: #99AAB5;
+    --coffee-light-brown: #D99E82;
+    --coffee-dark-brown: #8A4B38;
+  
+    /* Primary theme - Coffee brown */
+    --ion-color-primary: #8A4B38;
+    --ion-color-primary-rgb: 138, 75, 56;
+    --ion-color-primary-contrast: #ffffff;
+    --ion-color-primary-contrast-rgb: 255, 255, 255;
+    --ion-color-primary-shade: #794131;
+    --ion-color-primary-tint: #96624c;
+  
+    /* Secondary theme - Light brown */
+    --ion-color-secondary: #D99E82;
+    --ion-color-secondary-rgb: 217, 158, 130;
+    --ion-color-secondary-contrast: #000000;
+    --ion-color-secondary-contrast-rgb: 0, 0, 0;
+    --ion-color-secondary-shade: #bf8b73;
+    --ion-color-secondary-tint: #dda88f;
+  }

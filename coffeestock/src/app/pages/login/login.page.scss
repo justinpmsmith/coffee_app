@@ -1,0 +1,163 @@
+.login-content {
+    --background: var(--coffee-primary-brown);
+    padding: 0;
+    margin: 0;
+  }
+  
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 30px;
+    background-color: var(--coffee-primary-brown);
+  }
+  
+  .logo-container {
+    margin-bottom: 40px;
+  }
+  
+  .coffee-icon {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+  }
+  
+  .login-title {
+    color: var(--coffee-white);
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  
+  .form-container {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .input-group {
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .login-input {
+    --color: var(--coffee-white);
+    --placeholder-color: var(--coffee-white);
+    --placeholder-opacity: 0.7;
+    --padding-start: 0;
+    --padding-end: 0;
+    --padding-top: 8px;
+    --padding-bottom: 8px;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    
+    &::part(native) {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+    }
+  }
+  
+  .input-underline {
+    height: 1px;
+    width: 100%;
+    background-color: var(--coffee-white);
+    opacity: 0.5;
+    margin-top: 5px;
+  }
+  
+  .error-message {
+    color: #ff6b6b;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+  
+  .signup-link-container {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .signup-link {
+    color: var(--coffee-white);
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: underline;
+    cursor: pointer;
+    
+    &:hover {
+      opacity: 0.8;
+    }
+    
+    &:active {
+      opacity: 0.6;
+    }
+  }
+  
+  .login-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+  
+  .login-arrow {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    
+    &:hover {
+      opacity: 0.8;
+    }
+    
+    &:active {
+      opacity: 0.6;
+    }
+  }
+  
+  // Responsive adjustments
+  @media (max-height: 600px) {
+    .login-container {
+      padding: 20px 30px;
+    }
+    
+    .coffee-icon {
+      width: 80px;
+      height: 80px;
+    }
+    
+    .login-title {
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+    
+    .input-group {
+      margin-bottom: 25px;
+    }
+    
+    .login-button-container {
+      margin-top: 25px;
+    }
+  }

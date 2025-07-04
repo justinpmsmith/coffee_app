@@ -1,0 +1,42 @@
+<ion-content class="products-content">
+    <!-- Custom Toolbar -->
+    <app-toolbar
+      title="COFFEE FLAVOURS"
+      leftIcon="iconSync.svg"
+      rightIcon="iconAdd.svg"
+      (leftIconClick)="onSyncClick()"
+      (rightIconClick)="onAddClick()">
+    </app-toolbar>
+  
+    <!-- Products List -->
+    <div class="products-container">
+      <div class="product-card" *ngFor="let product of products">
+        <!-- Product Info -->
+        <div class="product-info">
+          <h3 class="product-name">{{ product.flavor_name }}</h3>
+          <p class="product-barcode">{{ product.barcode }}</p>
+          
+          <!-- Action Icons -->
+          <div class="product-actions">
+            <button class="action-button" (click)="onEditProduct(product)">
+              <img src="assets/icon/iconEdit.svg" alt="Edit" class="action-icon">
+            </button>
+            <button class="action-button" (click)="onDeleteProduct(product)">
+              <img src="assets/icon/iconDelete.svg" alt="Delete" class="action-icon">
+            </button>
+          </div>
+        </div>
+        
+        <!-- Product Image -->
+        <div class="product-image-container">
+          <img [src]="product.image_path" [alt]="product.flavor_name" class="product-image">
+        </div>
+      </div>
+  
+      <!-- Empty State -->
+      <div class="empty-state" *ngIf="products.length === 0">
+        <p>No coffee flavours added yet.</p>
+        <p>Tap the + icon to add your first product.</p>
+      </div>
+    </div>
+  </ion-content>

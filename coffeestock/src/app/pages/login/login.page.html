@@ -1,0 +1,53 @@
+<ion-content class="login-content">
+    <div class="login-container">
+      <!-- Coffee Cup Icon -->
+      <div class="logo-container">
+        <img src="assets/icon/LogoIcon.svg" alt="Coffee Cup" class="coffee-icon">
+      </div>
+      
+      <!-- LOGIN Title -->
+      <h1 class="login-title">LOGIN</h1>
+      
+      <!-- Login Form -->
+      <div class="form-container">
+        <div class="input-group">
+          <ion-input 
+            type="text" 
+            placeholder="USERNAME" 
+            [(ngModel)]="username"
+            class="login-input"
+            fill="clear">
+          </ion-input>
+          <div class="input-underline"></div>
+        </div>
+        
+        <div class="input-group">
+          <ion-input 
+            type="password" 
+            placeholder="PASSWORD" 
+            [(ngModel)]="password"
+            class="login-input"
+            fill="clear">
+          </ion-input>
+          <div class="input-underline"></div>
+        </div>
+        
+        <!-- Error Message -->
+        <div class="error-message" *ngIf="errorMessage">
+          {{ errorMessage }}
+        </div>
+        
+        <!-- Sign Up Link -->
+        <div class="signup-link-container">
+          <a class="signup-link" (click)="goToSignUp()">Sign Up</a>
+        </div>
+        
+        <!-- Login Button -->
+        <div class="login-button-container">
+          <button class="login-button" (click)="onLogin()" [disabled]="isLoading">
+            <img src="assets/icon/buttonLogin.svg" alt="Login" class="login-arrow">
+          </button>
+        </div>
+      </div>
+    </div>
+  </ion-content>
